@@ -1,36 +1,35 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity, Text, View, Image } from "react-native";
-import { Dimensions } from "react-native-web";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function PaymentSuccess() {
   return (
     <View style={styles.container}>
-      <View style={styles.mb}>
+      <View style={[styles.mb,{display: "flex",flexDirection: "row",justifyContent: "center"}]}>
         <Image source={require('../../assets/transaction-success.png')} style={styles.icon} />
       </View>
-      <View style={[styles.mb, { marginTop: -40 }]}>
+      <View style={[{marginBottom: "10%", marginTop: -50 }]}>
         <Text style={styles.centered}>
-          Payment success Yayy! {"\n"}
+          Payment success, Yayy! {"\n"}
         </Text>
-        <Text style={[styles.centered, { marginTop: 20, fontWeight: "normal", color: "#ffff" }]}>
+        <Text style={[styles.centered, { marginTop: 20,fontSize: 12, marginBottom:"5%", fontWeight: "normal", color: "#ffff" }]}>
           we will send you order details and invoice in {"\n"}
           your contact no. and registered email
         </Text>
       </View>
-      <View style={[styles.mb, { display: "flex", flexDirection: "row", justifyContent: "center" }]}>
+      <View style={[{ display: "flex", flexDirection: "row", justifyContent: "center", marginBottom:"10%" }]}>
         <Text style={{ color: "#C3744D", marginRight: 12 }}>
           Check Details
         </Text>
         <Icon name="arrow-right" size={20} color="#C3744D" />
       </View>
-      <View style={styles.mb}>
+      <View style={{marginBottom: "15%"}}>
         <TouchableOpacity title="sign in" style={styles.downloadButton}>
           <Text style={styles.downloadButtonText}>Download Invoice</Text>
         </TouchableOpacity>
       </View>
-      <View style={[styles.mb]}>
-        <Image source={require('../../assets/yellow-logo.svg')} style={styles.image} />
+      <View style={[{display: "flex",flexDirection: "row",justifyContent: "center"}]}>
+        <Image source={require('../../assets/yellow-logo.png')} style={styles.image} />
       </View>
     </View>
   );
@@ -53,14 +52,14 @@ const styles = StyleSheet.create({
     marginBottom: "30%",
   },
   image: {
-    width: 331,
+    width: "90%",
     height: 67,
     margin: "auto",
     resizeMode: "contain"
   },
   icon: {
     width: 400,
-    height: 250,
+    height: 200,
     margin: "auto",
     resizeMode: "contain"
   },
@@ -77,6 +76,6 @@ const styles = StyleSheet.create({
   },
   downloadButtonText: {
     color: "#fff",
-    fontWeight: 500
+    fontWeight: "500"
   }
 });
