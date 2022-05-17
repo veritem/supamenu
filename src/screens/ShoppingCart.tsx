@@ -1,13 +1,13 @@
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
-export default function NotificationScreen() {
-  return (
+export default function ShoppingCartScreen() {
+    return (
         <View style={styles.container}>
-            <Text>Notification Screen</Text>
+            <Text>Shopping Cart Screen</Text>
         </View>
     );
-};
+}
 
 
 const styles = StyleSheet.create({

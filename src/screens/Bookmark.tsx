@@ -1,13 +1,13 @@
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
-export default function ShoppingCartScreen() {
-  return (
+export default function SearchScreen() {
+    return (
         <View style={styles.container}>
-            <Text>Shopping Cart Screen</Text>
+            <Text>Bookmark Screen</Text>
         </View>
     );
-};
+}
 
 
 const styles = StyleSheet.create({
