@@ -6,7 +6,7 @@ import { Rating } from 'react-native-ratings';
 export default function Feedback() {
   return (
     <View style={styles.container}>
-      <View style={[styles.mb,{marginTop: "20%"}]}>
+      <View style={[styles.mb,{marginTop: "15%"}]}>
         <Text style={styles.centered}>
           Yayy! {"\n"}
           We value all feedback,{"\n"}
@@ -28,8 +28,8 @@ export default function Feedback() {
           improve our service !
         </Text>
       </View>
-      <View style={[styles.mb]}>
-        <Image source={require('../../assets/yellow-logo.svg')} style={styles.image} />
+      <View style={[styles.mb,{display: "flex",flexDirection: "row",justifyContent: "center"}]}>
+        <Image source={require('../../assets/yellow-logo.png')} style={styles.image} />
       </View>
     </View>
   );
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     marginBottom: "30%",
   },
   image: {
-    width: 331,
+    width: "90%",
     height: 67,
     margin: "auto",
     resizeMode: "contain"
