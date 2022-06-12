@@ -22,8 +22,9 @@ export default function Login({ navigation }) {
     useEffect(() => {
         async function getToken() {
             const token = await SecureStore.getItemAsync('token');
+            console.log({ token });
             if (token) {
-                navigation.navigate('Search');
+                navigation.navigate('Home');
             }
         }
         getToken();
@@ -61,8 +62,7 @@ export default function Login({ navigation }) {
                 try {
                     await SecureStore.setItemAsync('token', JSON.stringify(data.token));
                     await SecureStore.setItemAsync('refreshToken', JSON.stringify(data.token.refreshToken));
-                    console.log('here')
-                    navigation.navigate('Search');
+                    navigation.navigate('Home');
                 } catch (error) {
                     Alert.alert('Error', 'Something went wrong');
                 }
