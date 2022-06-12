@@ -23,9 +23,9 @@ export default function SignUp({ navigation }) {
         onSubmit: async (values, { resetForm }) => {
             if (
                 !values.email ||
-        !values.password ||
-        !values.mobile ||
-        !values.fullName
+                !values.password ||
+                !values.mobile ||
+                !values.fullName
             ) {
                 Alert.alert('Error', 'You must fill in all fields');
                 return;
@@ -51,7 +51,7 @@ export default function SignUp({ navigation }) {
             const data = await response.json();
 
             if (data.apierror) {
-                console.log(data)
+                console.log(data);
                 Alert.alert('Error', data.apierror.message);
             } else {
                 Alert.alert('Success', 'You have successfully signed up!');
@@ -141,7 +141,7 @@ export default function SignUp({ navigation }) {
                 <TouchableOpacity
                     style={styles.button}
                     onPress={() => {
-                        navigation.navigate('Login');
+                        navigation.navigate('SignIn');
                     }}
                 >
                     <Text style={styles.buttonText}>Sign in</Text>

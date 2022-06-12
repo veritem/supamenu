@@ -62,7 +62,7 @@ export default function Login({ navigation }) {
                 try {
                     await SecureStore.setItemAsync('token', JSON.stringify(data.token));
                     await SecureStore.setItemAsync('refreshToken', JSON.stringify(data.token.refreshToken));
-                    navigation.navigate('Home');
+                    navigation.navigate('Scan');
                 } catch (error) {
                     Alert.alert('Error', 'Something went wrong');
                 }
@@ -147,7 +147,7 @@ export default function Login({ navigation }) {
                             <Text
                                 style={styles.formTextSignUp}
                                 onPress={() => {
-                                    navigation.navigate('Register');
+                                    navigation.navigate('SignUp');
                                 }}
                             >
                                 Sign up

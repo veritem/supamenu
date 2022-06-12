@@ -6,7 +6,6 @@ import {
     CardStyleInterpolators,
 } from '@react-navigation/stack';
 
-import SplashScreen from '../../screens/Splash';
 import Login from '../../screens/SignIn';
 import SignUp from '../../screens/SignUp';
 import DashboardScreen from '../../screens/Dashboard';
@@ -50,7 +49,6 @@ const Tabs: any = createBottomTabNavigator();
 function AppNavigator() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-    console.log('here')
     useEffect(() => {
         async function getToken() {
             const token = await SecureStore.getItemAsync('token');
